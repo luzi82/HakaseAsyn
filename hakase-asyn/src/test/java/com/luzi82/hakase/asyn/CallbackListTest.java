@@ -11,7 +11,7 @@ public class CallbackListTest {
 	@Test
 	public void test() throws Exception {
 		final ICallbackList cl = newCallbackList();
-		final ResultList<Void> rl = new ResultList<>();
+		final ResultList<Void> rl = new ResultList<Void>();
 		final int[] a = { 0 };
 		final int[] b = { 0 };
 		final int[] c = { 0 };
@@ -135,7 +135,7 @@ public class CallbackListTest {
 
 	public void testObjectPass() throws Exception {
 		final ICallbackList cl = newCallbackList();
-		final ResultList<Void> rl = new ResultList<>();
+		final ResultList<Void> rl = new ResultList<Void>();
 		final int[] a = { 0 };
 		final int[] b = { 0 };
 		final int[] c = { 0 };

@@ -3,8 +3,7 @@ package com.luzi82.hakase.asyn;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 public class CallbackUtilTest {
