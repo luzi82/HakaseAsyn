@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.concurrent.Executor;
 
-public class CallbackList extends LinkedList<ICallback<Object>> implements ICallbackList {
+public class CCallbackList extends LinkedList<ICallback<Object>> implements ICallbackList {
 
 	private static final long serialVersionUID = 7971318935647578117L;
 
@@ -14,7 +14,7 @@ public class CallbackList extends LinkedList<ICallback<Object>> implements ICall
 
 	Iterator<ICallback<Object>> itr = null;
 
-	public CallbackList(Executor aExecutor) {
+	public CCallbackList(Executor aExecutor) {
 		mExecutor = aExecutor;
 	}
 
@@ -44,7 +44,7 @@ public class CallbackList extends LinkedList<ICallback<Object>> implements ICall
 	public void next(final Object aObject) {
 		if (itr.hasNext()) {
 			ICallback<Object> next = itr.next();
-			CallbackUtil.startCallback(next, aObject, mExceptionCallback, mExecutor);
+			SCallbackUtil.startCallback(next, aObject, mExceptionCallback, mExecutor);
 		}
 	}
 

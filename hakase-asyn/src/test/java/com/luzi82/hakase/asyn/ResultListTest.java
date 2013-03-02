@@ -57,7 +57,7 @@ public class ResultListTest {
 	}
 
 	protected <T> IResultList<T> newResultList(T[] aT) {
-		return new ResultList<T>();
+		return new CResultList<T>();
 	}
 
 }

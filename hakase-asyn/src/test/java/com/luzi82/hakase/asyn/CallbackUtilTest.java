@@ -12,7 +12,7 @@ public class CallbackUtilTest {
 	public void testStartCallbackExceptionHandlerNull() {
 		Executor exec = Executors.newCachedThreadPool();
 		try {
-			CallbackUtil.startCallback(new ICallback<Void>() {
+			SCallbackUtil.startCallback(new ICallback<Void>() {
 				@Override
 				public void callback(Void aResult) {
 					throw new YouShouldNotSeeMe();
@@ -27,8 +27,8 @@ public class CallbackUtilTest {
 	@Test
 	public void testStartCallbackCallbackNull() {
 		Executor exec = Executors.newCachedThreadPool();
-		CallbackUtil.startCallback(null, null, null, exec);
-		CallbackUtil.startCallback(null, null, new ICallback<Exception>() {
+		SCallbackUtil.startCallback(null, null, null, exec);
+		SCallbackUtil.startCallback(null, null, new ICallback<Exception>() {
 			@Override
 			public void callback(Exception aResult) {
 				throw new YouShouldNotSeeMe();
@@ -40,8 +40,8 @@ public class CallbackUtilTest {
 	public void testStartException() {
 		YouShouldNotSeeMe ex = new YouShouldNotSeeMe();
 		Executor exec = Executors.newCachedThreadPool();
-		MethodCallbackWait<Integer> mcw = new MethodCallbackWait<Integer>();
-		CallbackUtil.startException(mcw, ex, exec);
+		CMethodCallbackWait<Integer> mcw = new CMethodCallbackWait<Integer>();
+		SCallbackUtil.startException(mcw, ex, exec);
 		try {
 			mcw.waitDone();
 			Assert.fail();
@@ -54,7 +54,7 @@ public class CallbackUtilTest {
 	public void testStartExceptionExceptionCallbackNull() {
 		YouShouldNotSeeMe ex = new YouShouldNotSeeMe();
 		Executor exec = Executors.newCachedThreadPool();
-		CallbackUtil.startException(null, ex, exec);
+		SCallbackUtil.startException(null, ex, exec);
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e) {

@@ -2,9 +2,9 @@ package com.luzi82.hakase.asyn;
 
 import java.util.concurrent.Executor;
 
-public class CallbackUtil {
+public class SCallbackUtil {
 
-	protected CallbackUtil() {
+	protected SCallbackUtil() {
 	}
 
 	public static <T> void startCallback(final ICallback<T> aCallback, final T aValue, final ICallback<Exception> aExceptionCallback, Executor aExecutor) {

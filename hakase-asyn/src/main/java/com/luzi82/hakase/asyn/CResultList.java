@@ -2,7 +2,7 @@ package com.luzi82.hakase.asyn;
 
 import java.util.LinkedList;
 
-public class ResultList<T> extends LinkedList<T> implements IResultList<T> {
+public class CResultList<T> extends LinkedList<T> implements IResultList<T> {
 
 	private static final long serialVersionUID = -4774634327996404977L;
 

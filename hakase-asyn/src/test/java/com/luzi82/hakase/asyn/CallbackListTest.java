@@ -11,7 +11,7 @@ public class CallbackListTest {
 	@Test
 	public void test() throws Exception {
 		final ICallbackList cl = newCallbackList();
-		final ResultList<Void> rl = new ResultList<Void>();
+		final CResultList<Void> rl = new CResultList<Void>();
 		final int[] a = { 0 };
 		final int[] b = { 0 };
 		final int[] c = { 0 };
@@ -96,7 +96,7 @@ public class CallbackListTest {
 	@Test
 	public void testException() throws Exception {
 		final ICallbackList cl = newCallbackList();
-		final ResultList<Exception> rl = new ResultList<Exception>();
+		final CResultList<Exception> rl = new CResultList<Exception>();
 		cl.addCallback(new ICallback<Void>() {
 			@Override
 			public void callback(Void aV) {
@@ -126,7 +126,7 @@ public class CallbackListTest {
 
 	@Test
 	public void giveMeCoverageForMyPrivateConstructor() throws Exception {
-		Constructor<?> constructor = CallbackUtil.class.getDeclaredConstructor();
+		Constructor<?> constructor = SCallbackUtil.class.getDeclaredConstructor();
 		Assert.assertFalse(constructor.isAccessible());
 		constructor.setAccessible(true);
 		constructor.newInstance();
@@ -135,7 +135,7 @@ public class CallbackListTest {
 
 	public void testObjectPass() throws Exception {
 		final ICallbackList cl = newCallbackList();
-		final ResultList<Void> rl = new ResultList<Void>();
+		final CResultList<Void> rl = new CResultList<Void>();
 		final int[] a = { 0 };
 		final int[] b = { 0 };
 		final int[] c = { 0 };
@@ -167,7 +167,7 @@ public class CallbackListTest {
 	}
 
 	protected ICallbackList newCallbackList() {
-		return new CallbackList(Executors.newCachedThreadPool());
+		return new CCallbackList(Executors.newCachedThreadPool());
 	}
 
 }

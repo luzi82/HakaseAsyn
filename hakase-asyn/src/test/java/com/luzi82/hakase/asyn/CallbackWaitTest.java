@@ -46,7 +46,7 @@ public class CallbackWaitTest {
 	}
 
 	public <T> IMethodCallbackWait<T> newMethodCallbackWait(T[] aT) {
-		return new MethodCallbackWait<T>();
+		return new CMethodCallbackWait<T>();
 	}
 
 }

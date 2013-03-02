@@ -1,6 +1,6 @@
 package com.luzi82.hakase.asyn;
 
-public class MethodCallbackWait<T> implements IMethodCallbackWait<T> {
+public class CMethodCallbackWait<T> implements IMethodCallbackWait<T> {
 
 	public boolean mCallbackDone;
 	public T mCallbackReturn;
@@ -12,14 +12,14 @@ public class MethodCallbackWait<T> implements IMethodCallbackWait<T> {
 	public synchronized void callback(T aResult) {
 		mCallbackDone = true;
 		mCallbackReturn = aResult;
-		MethodCallbackWait.this.notify();
+		CMethodCallbackWait.this.notify();
 	}
 
 	@Override
 	public synchronized void exception(Exception aResult) {
 		mExceptionDone = true;
 		mException = aResult;
-		MethodCallbackWait.this.notify();
+		CMethodCallbackWait.this.notify();
 	}
 
 	public synchronized T waitDone() throws Exception {
