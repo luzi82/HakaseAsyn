@@ -1,9 +1,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<name>HakaseAsyn</name>
 	<groupId>com.luzi82.hakase.asyn</groupId>
 	<artifactId>hakase-asyn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<name>HakaseAsyn</name>
+	<description>Asyn operation library</description>
+	<url>https://github.com/luzi82/HakaseAsyn</url>
+	
+	<licenses>
+		<license>
+			<name>GNU LESSER GENERAL PUBLIC LICENSE</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<scm>
+		<connection>scm:git:git@github.com:luzi82/HakaseAsyn.git</connection>
+		<developerConnection>scm:git:git@github.com:luzi82/HakaseAsyn.git</developerConnection>
+		<url>git@github.com:luzi82/HakaseAsyn.git</url>
+	</scm>
+	
+	<developers>
+		<developer>
+			<id>luzi82</id>
+			<name>Luzi82</name>
+			<email>luzi82@gmail.com</email>
+		</developer>
+	</developers>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -12,6 +38,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins> 
 			<plugin> 
@@ -24,4 +51,5 @@
 			</plugin> 
 		</plugins> 
 	</build>
+	
 </project>
