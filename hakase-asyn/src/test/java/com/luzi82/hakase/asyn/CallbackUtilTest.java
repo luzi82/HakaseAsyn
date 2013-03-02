@@ -9,7 +9,7 @@ import org.junit.Test;
 public class CallbackUtilTest {
 
 	@Test
-	public void testNoExceptionHandler() {
+	public void testStartCallbackExceptionHandlerNull() {
 		Executor exec = Executors.newCachedThreadPool();
 		try {
 			CallbackUtil.startCallback(new ICallback<Void>() {
@@ -25,7 +25,7 @@ public class CallbackUtilTest {
 	}
 
 	@Test
-	public void testNoCallback() {
+	public void testStartCallbackCallbackNull() {
 		Executor exec = Executors.newCachedThreadPool();
 		CallbackUtil.startCallback(null, null, null, exec);
 		CallbackUtil.startCallback(null, null, new ICallback<Exception>() {
@@ -34,6 +34,31 @@ public class CallbackUtilTest {
 				throw new YouShouldNotSeeMe();
 			}
 		}, exec);
+	}
+
+	@Test
+	public void testStartException() {
+		YouShouldNotSeeMe ex = new YouShouldNotSeeMe();
+		Executor exec = Executors.newCachedThreadPool();
+		MethodCallbackWait<Integer> mcw = new MethodCallbackWait<Integer>();
+		CallbackUtil.startException(mcw, ex, exec);
+		try {
+			mcw.waitDone();
+			Assert.fail();
+		} catch (Exception e) {
+			Assert.assertEquals(ex, e);
+		}
+	}
+
+	@Test
+	public void testStartExceptionExceptionCallbackNull() {
+		YouShouldNotSeeMe ex = new YouShouldNotSeeMe();
+		Executor exec = Executors.newCachedThreadPool();
+		CallbackUtil.startException(null, ex, exec);
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+		}
 	}
 
 	private class YouShouldNotSeeMe extends RuntimeException {
