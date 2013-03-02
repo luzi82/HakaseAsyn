@@ -84,7 +84,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>${artifactId}-${version}-${buildNumber}-${timestamp}</finalName>
+		<finalName>${project.artifactId}-${project.version}-${buildNumber}-${timestamp}</finalName>
 	</build>
 
 	<properties>
