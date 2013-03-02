@@ -24,4 +24,15 @@ public class CallbackUtil {
 		});
 	}
 
+	public static <T> void startException(final IMethodCallback<T> aCallback, final Exception aValue, Executor aExecutor) {
+		if (aCallback == null)
+			return;
+		aExecutor.execute(new Runnable() {
+			@Override
+			public void run() {
+				aCallback.exception(aValue);
+			}
+		});
+	}
+
 }
