@@ -84,17 +84,22 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.4</version>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>1.2</version>
 				<executions>
 					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
+						<id>sign</id>
 						<goals>
 							<goal>sign</goal>
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<keystore>${jarsigner.keystore}</keystore>
+					<alias>${jarsigner.alias}</alias>
+					<storepass>${jarsigner.storepass}</storepass>
+					<keypass>${jarsigner.keypass}</keypass>
+				</configuration>
 			</plugin>
 		</plugins>
 		<extensions>
