@@ -135,7 +135,7 @@
 		</repository>
 		<site>
 			<id>main-site</id>
-			<url>scp://ci@www.luzi82.com/home/ci/public_html/maven-site/HakaseAsyn/</url>
+			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/HakaseAsyn/</url>
 		</site>
 	</distributionManagement>
 
