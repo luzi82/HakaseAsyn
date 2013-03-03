@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="HakaseAsyn">
+	<body>
+		<menu ref="reports"/>
+		<menu name="Resource">
+			<item name="Repo" href="http://www.luzi82.com/~ci/maven-repo/com/luzi82/hakase/hakase-asyn/"/>
+		</menu>
+	</body>
+</project>
