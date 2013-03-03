@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.luzi82.hakase</groupId>
 	<artifactId>hakase-asyn</artifactId>
-	<version>0.0.0.alpha.0.nightly</version>
+	<version>0.0.0.alpha.0.master</version>
 
 	<name>HakaseAsyn</name>
 	<description>Asyn operation library</description>
