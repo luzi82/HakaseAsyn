@@ -10,6 +10,12 @@
 	<description>Asyn operation library</description>
 	<url>http://www.luzi82.com/~ci/maven-site/${project.name}/${project.version}/</url>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.ciManagement.url>http://ci.luzi82.com:8080/job/HakaseAsyn%20master/</project.ciManagement.url>
+	</properties>
+
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE</name>
@@ -137,12 +143,7 @@
 
 	<ciManagement>
 		<system>Jenkins</system>
-		<url>http://ci.luzi82.com:8080/job/HakaseAsyn/</url>
+		<url>${project.ciManagement.url}</url>
 	</ciManagement>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
 
 </project>
