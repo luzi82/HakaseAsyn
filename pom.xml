@@ -83,12 +83,25 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>${project.artifactId}-${project.version}-${timestamp}-${buildNumber}</finalName>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh-external</artifactId>
+				<version>2.4</version>
+			</extension>
+		</extensions>
 	</build>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>main-repo</id>
+			<url>scpexe://www.luzi82.com/home0/luzi82/public_html/projects/HakaseToy/maven-repo</url>
+		</repository>
+	</distributionManagement>
 
 </project>
