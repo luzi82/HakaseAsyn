@@ -100,7 +100,7 @@
 	<distributionManagement>
 		<repository>
 			<id>main-repo</id>
-			<url>scpexe://www.luzi82.com/home0/luzi82/public_html/projects/HakaseToy/maven-repo</url>
+			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-repo</url>
 		</repository>
 	</distributionManagement>
 
