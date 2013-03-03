@@ -1,5 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.luzi82.hakase</groupId>
 	<artifactId>hakase-asyn</artifactId>
@@ -7,7 +8,7 @@
 
 	<name>HakaseAsyn</name>
 	<description>Asyn operation library</description>
-	<url>http://www.luzi82.com/~ci/maven-site/HakaseAsyn/</url>
+	<url>http://www.luzi82.com/~ci/maven-site/${project.name}/${project.version}/</url>
 
 	<licenses>
 		<license>
@@ -20,7 +21,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:luzi82/HakaseAsyn.git</connection>
 		<developerConnection>scm:git:git@github.com:luzi82/HakaseAsyn.git</developerConnection>
-		<url>git@github.com:luzi82/HakaseAsyn.git</url>
+		<url>https://github.com/luzi82/HakaseAsyn</url>
 	</scm>
 
 	<developers>
@@ -104,6 +105,7 @@
 			</extension>
 		</extensions>
 	</build>
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -122,11 +124,6 @@
 		</plugins>
 	</reporting>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
-
 	<distributionManagement>
 		<repository>
 			<id>main-repo</id>
@@ -134,8 +131,18 @@
 		</repository>
 		<site>
 			<id>main-site</id>
-			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/HakaseAsyn/</url>
+			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/${project.name}/${project.version}</url>
 		</site>
 	</distributionManagement>
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://ci.luzi82.com:8080/job/HakaseAsyn/</url>
+	</ciManagement>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 
 </project>
