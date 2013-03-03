@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.luzi82.hakase</groupId>
 	<artifactId>hakase-asyn</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1.alpha</version>
 
 	<name>HakaseAsyn</name>
 	<description>Asyn operation library</description>
@@ -61,7 +61,7 @@
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 						</manifest>
 						<manifestEntries>
-							<Implementation-Build>${buildNumber}-${timestamp}</Implementation-Build>
+							<Implementation-Build>${timestamp}-${buildNumber}</Implementation-Build>
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -80,11 +80,10 @@
 				</executions>
 				<configuration>
 					<shortRevisionLength>8</shortRevisionLength>
-					<timestampFormat>{0,date,yyyyMMddHHmmss}</timestampFormat>
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>${project.artifactId}-${project.version}-${buildNumber}-${timestamp}</finalName>
+		<finalName>${project.artifactId}-${project.version}-${timestamp}-${buildNumber}</finalName>
 	</build>
 
 	<properties>
