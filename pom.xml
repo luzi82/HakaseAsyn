@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.luzi82.hakase</groupId>
 	<artifactId>hakase-asyn</artifactId>
-	<version>0.0.0.alpha.0.master</version>
+	<version>0.0.0-SNAPSHOT</version>
 
 	<name>HakaseAsyn</name>
 	<description>Asyn operation library</description>
-	<url>http://www.luzi82.com/~ci/maven-site/${project.name}/${project.version}/</url>
+	<url>http://www.luzi82.com/~ci/maven-site/HakaseAsyn/${project.version}/</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -137,7 +137,7 @@
 		</repository>
 		<site>
 			<id>main-site</id>
-			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/${project.name}/${project.version}</url>
+			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/HakaseAsyn/${project.version}</url>
 		</site>
 	</distributionManagement>
 
