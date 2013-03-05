@@ -5,6 +5,7 @@
 	<groupId>com.luzi82.hakase</groupId>
 	<artifactId>hakase-asyn</artifactId>
 	<version>0.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<name>HakaseAsyn</name>
 	<description>Asyn operation library</description>
@@ -15,6 +16,12 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.ciManagement.url>http://ci.luzi82.com:8080/job/HakaseAsyn%20master/</project.ciManagement.url>
 	</properties>
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
 	<licenses>
 		<license>
@@ -130,6 +137,7 @@
 		</plugins>
 	</reporting>
 
+	<!-- 
 	<distributionManagement>
 		<repository>
 			<id>main-repo</id>
@@ -140,6 +148,7 @@
 			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/HakaseAsyn/${project.version}</url>
 		</site>
 	</distributionManagement>
+	 -->
 
 	<ciManagement>
 		<system>Jenkins</system>

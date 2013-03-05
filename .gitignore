@@ -1,3 +1,4 @@
 .metadata
 hakase-asyn/target/
 /target
+/release.properties
