@@ -136,18 +136,12 @@
 		</plugins>
 	</reporting>
 
-	<!-- 
 	<distributionManagement>
-		<repository>
-			<id>main-repo</id>
-			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-repo</url>
-		</repository>
 		<site>
 			<id>main-site</id>
 			<url>scpexe://ci@www.luzi82.com/home/ci/public_html/maven-site/HakaseAsyn/${project.version}</url>
 		</site>
 	</distributionManagement>
-	 -->
 
 	<ciManagement>
 		<system>Jenkins</system>
